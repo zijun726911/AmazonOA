@@ -39,7 +39,7 @@ class Solution {
             int minDist=item.dist;
 
             if(y==destination[0]&&x==destination[1]) return minDist;
-            if (visited[y][x]) continue; //当前节点已经被更短的距离更新过，continue; 之前先出队的一定是到该点的最短距离
+            if (visited[y][x]) continue; //当前节点已经被更短的距离更新过，continue; 之前先出队的一定是到该点的最短距离；仅本题适用
 
             visited[y][x]=true;
 
@@ -56,7 +56,7 @@ class Solution {
                 newY-=dY[i];
                 newX-=dX[i];
                 step--;
-                if (!visited[newY][newX]){ //if(visited[newY][newX]==true) 当前节点已经被更短的距离更新过
+                if (!visited[newY][newX]){ //if(visited[newY][newX]==true) 当前节点已经被更短的距离更新过;仅本题适用
 
                     q.offer(new Item(step+minDist,newY,newX));
                 }
