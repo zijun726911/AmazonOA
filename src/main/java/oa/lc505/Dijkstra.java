@@ -7,7 +7,7 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 
 // dijkstra is priorityQueue +BFS， single source with positive path weight
-class Solution {
+class Dijkstra {
 
     int dX[]={0,1,0,-1};
     int dY[]={1,0,-1,0};
@@ -73,7 +73,7 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        int res = new Solution().shortestDistance(
+        int res = new Dijkstra().shortestDistance(
                 new int[][]{{0, 0, 1, 0, 0}, {0, 0, 0, 0, 0}, {0, 0, 0, 1, 0}, {1, 1, 0, 1, 1}, {0, 0, 0, 0, 0}},
                 new int[]{0, 4},
                 new int[]{4, 4}
